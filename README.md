@@ -12,37 +12,6 @@
 NNLCB is a general-purpose (Universal) lossless compression algorithms benchmark test for multi-source data with deep neural networks.
 Currently, in our benchmark, we performed examinations on general-purpose lossless compressors, including 7 NN-based and 6 traditional compressors, using 19 datasets with differing type. Each loss-less compressor was evaluated on 13 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression.
 
-| Algorithms                     | AvgCR       | WavgCR      | TotalCT   | TotalDT   | AvgCPM    | AvgDPM    | AvgSSP    | WavgSSP   | CRP       |
-|-------------------------------|-------------|-------------|----------|----------|-----------|-----------|-----------|-----------|-----------|
-| Cmix \cite{cmix}              | **1.502**   | 1.784       | 74.427   | 74.613   | 18.975    | 18.976    | 0.812     | 0.777     | 20.989    |
-| DZip \cite{goyal2021dzip}     | **1.628**   | 1.876       | 9.769    | 4.060    | 3.576     | 2.561     | 0.796     | 0.765     | 18.943    |
-| DeepZip \cite{goyal2018deepzip}| **1.643**   | 1.875       | 5.505    | 1.122    | 2.198     | 1.738     | 0.795     | 0.766     | 18.645    |
-| NNCP \cite{bellard2019nncp}    | 1.825       | 1.986       | 23.722   | 23.454   | 0.111     | 0.111     | 0.772     | 0.752     | 16.856    |
-| Lstm-compress \cite{lstm-compress} | 1.900  | 2.091       | 11.526   | 11.482   | 0.009     | 0.009     | 0.762     | 0.739     | 16.260    |
-| PAC \cite{mao2023faster}       | 1.912       | 2.044       | 2.496    | 3.474    | 2.330     | 2.434     | 0.761     | 0.744     | 15.986    |
-| TRACE \cite{mao2022trace}     | 1.963       | 2.126       | 2.172    | 3.143    | 2.324     | 2.421     | 0.755     | 0.734     | 15.756    |
-| BSC \cite{libbsc}             | 2.048       | 2.423       | 0.008    | 0.006    | 0.070     | 0.071     | 0.744     | 0.697     | 18.613    |
-| PPMD\cite{PPMD}               | 2.092       | 2.444       | 0.011    | 0.012    | 0.185     | 0.184     | 0.738     | 0.694     | 18.404    |
-| XZ \cite{XZ}                  | 2.219       | 2.406       | 0.033    | 0.004    | 0.228     | 0.039     | 0.723     | 0.699     | 16.582    |
-| Lzma2 \cite{Lzma2}            | 2.227       | 2.392       | 0.017    | 0.003    | 0.195     | 0.025     | 0.722     | 0.701     | 16.321    |
-| PBzip2 \cite{PBzip2}          | 2.345       | 2.665       | 0.003    | 0.003    | 0.083     | 0.050     | 0.707     | 0.667     | 16.732    |
-| Gzip \cite{Gzip}              | 2.976       | 3.158       | 0.008    | 0.003    | 0.002     | 0.002     | 0.628     | 0.605     | 14.809    |
-| DZip* \cite{goyal2021dzip}    | 4.457       | 4.358       | 9.769    | 4.060    | 3.576     | 2.561     | 0To embed the table in a README file, you can convert the LaTeX table into a Markdown table format. Here's the converted table:
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Embedded Excel Spreadsheet</title>
-</head>
-<body>
-    <h1>Embedded Excel Spreadsheet</h1>
-
-    <iframe src="https://fahaihi.github.io/NNLCB/results.xlsx" width="100%" height="500px"></iframe>
-</body>
-</html>
-
-
-
 ## Benchmark DataSets
 
 We benchmark on 19 widely studied datasets. 
@@ -207,9 +176,9 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 
 | Algorithms | AvgCR | WavgCR | TotalCT | TotalDT | AvgCPM | AvgDPM | AvgSSP | WavgSSP | CRP |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Cmix  | **1.502** | 1.784 | 74.427 | 74.613 | 18.975 | 18.976 | 0.812 | 0.777 | 20.989 |
-| DZip  | **1.628** | 1.876 | 9.769 | 4.060 | 3.576 | 2.561 | 0.796 | 0.765 | 18.943 |
-| DeepZip  | **1.643** | 1.875 | 5.505 | 1.122 | 2.198 | 1.738 | 0.795 | 0.766 | 18.645 |
+| Cmix [^1^] | **1.502** | 1.784 | 74.427 | 74.613 | 18.975 | 18.976 | 0.812 | 0.777 | 20.989 |
+| DZip [^2^] | **1.628** | 1.876 | 9.769 | 4.060 | 3.576 | 2.561 | 0.796 | 0.765 | 18.943 |
+| DeepZip [^3^] | **1.643** | 1.875 | 5.505 | 1.122 | 2.198 | 1.738 | 0.795 | 0.766 | 18.645 |
 | NNCP | 1.825 | 1.986 | 23.722 | 23.454 | 0.111 | 0.111 | 0.772 | 0.752 | 16.856 |
 | Lstm-compress | 1.900 | 2.091 | 11.526 | 11.482 | 0.009 | 0.009 | 0.762 | 0.739 | 16.260 |
 | PAC | 1.912 | 2.044 | 2.496 | 3.474 | 2.330 | 2.434 | 0.761 | 0.744 | 15.986 |
@@ -222,13 +191,14 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 | Gzip | 2.976 | 3.158 | 0.008 | 0.003 | 0.002 | 0.002 | 0.628 | 0.605 | 14.809 |
 | DZip* | 4.457 | 4.358 | 9.769 | 4.060 | 3.576 | 2.561 | 0.443 | 0.455 | 14.912 |
 | DeepZip* | 4.472 | 4.364 | 5.505 | 1.122 | 2.198 | 1.738 | 0.441 | 0.455 | 14.823 |
-#### Notes:
-##### "*" : Consideration of NN Model Size
-##### "Avg/WavgCR" : Average OR Weighted Average Compression Ratio
-##### "TotalCT/DT" : Total Compression OR Decompression Time
-##### "AvgCPM/DPM" : Average Compression OR Decompression Peak Memory
-##### "Avg/WavgSSP" : Average OR Weighted Average Storage Saving Percentage
-##### "CRP" : Compression Robust Performance
+
+**Notes.** "*" : Consideration of NN Model Size; 
+"Avg/WavgCR (bits/base)" : Average OR Weighted Average Compression Ratio; 
+"TotalCT/DT (Hours)" : Total Compression OR Decompression Time;
+"AvgCPM/DPM (GB)" : Average Compression OR Decompression Peak Memory;
+"Avg/WavgSSP (%)" : Average OR Weighted Average Storage Saving Percentage;
+"CRP (%)" : Compression Robust Performance;
+
 ## Acknowledgements
 - Thanks to [@NCBI](https://www.freelancer.com/u/Ostokhoon) for all available datasets.
 
