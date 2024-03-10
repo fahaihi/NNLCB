@@ -4,7 +4,7 @@
   <img src="https://fahaihi.github.io/NNLCB/LOG.png" alt="Logo" width="821" height="350">
 </h1>
 
-# A Holistic Benchmark Evaluation for Neural-Network-Based Lossless Universal Compressors**
+# A Holistic Benchmark Evaluation for Neural-Network-Based Lossless Universal Compressors
 
 
 ## Overview
@@ -41,19 +41,18 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 
 ## Benchmark Algorithms details
 
-### Cmix
+### Cmix [@The Cmix Offical Website](https://github.com/byronknoll/cmix)
 Cmix is a neural network based lossless compression algorithm aimed at optimizing compression ratio at the cost of high CPU/memory usage, and it uses thousands of context models followed by an NN-based mixer. We used Cmix V19 to finish the experiments.
-[@The Cmix Offical Website](https://github.com/byronknoll/cmix)
 ```sh
 # compression
 cmix -c file file.cmix
 # decompression
 cmix -d file.cmix file.cmix.out
 ```
-### LSTM-compress
+### LSTM-compress [@The LSTM-compress Offical Website](https://github.com/byronknoll/lstm-compress)
 LSTM-compressor is an LSTM-based lossless compression algorithm that uses the same LSTM module and preprocessing code as CMIX. LSTM-compress currently only supports compression of a single file. In this manuscript, we used LSTM-compress V3. The detailed commands are as follows.
 
-``` shell script
+```sh
 # compression
 lstm-compress -c file file.lstm
 # decompression
