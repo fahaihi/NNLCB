@@ -12,6 +12,16 @@ NNLCB is a general-purpose (Universal) lossless compression algorithms benchmark
 Currently, in our benchmark, we performed examinations on general-purpose lossless compressors, including 7 NN-based and 6 traditional compressors, using 19 datasets with differing type. Each loss-less compressor was evaluated on 13 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression.
 
 
+<head>
+    <title>Embedded Excel Spreadsheet</title>
+</head>
+<body>
+    <h1>Embedded Excel Spreadsheet</h1>
+
+    <iframe src="https://fahaihi.github.io/NNLCB/results.xlsx" width="100%" height="500px"></iframe>
+</body>
+
+
 
 ## Benchmark DataSets
 
@@ -177,9 +187,9 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 - Thanks to [@NCBI](https://www.freelancer.com/u/Ostokhoon) for all available datasets.
 
 ## Additional Information
-**Source-Version-Date**   2024.03.13.
+**Source-Version-Date**   2024.03.08.
 
-**Latest-Version-Date**   2024.10.07.
+**Latest-Version-Date**   2024.03.10.
 
 **Authors:**     NBJL-AIGrop.
 
