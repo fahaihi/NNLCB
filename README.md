@@ -44,7 +44,7 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 ### Cmix
 Cmix is a neural network based lossless compression algorithm aimed at optimizing compression ratio at the cost of high CPU/memory usage, and it uses thousands of context models followed by an NN-based mixer. We used Cmix V19 to finish the experiments.
 [@The Cmix Offical Website](https://github.com/byronknoll/cmix)
-```shell script
+```sh
 # compression
 cmix -c file file.cmix
 # decompression
