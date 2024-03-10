@@ -1,6 +1,17 @@
-## 
+<!-- LOGO -->
+<br />
+<h1>
+<p align="center">
+  <img src="https://github.com/fahaihi/PMFFRC/blob/master/Log.png" alt="Logo" width="722" height="189">
+</h1>
+  <p align="center">
+    A Holistic Benchmark Evaluation for Neural-Network-Based Lossless Universal Compression Algorithms.
+    </p>
 
-## A Holistic Review and Benchmark Evaluation for Neural-Network-Based Lossless Universal Compression Algorithms
+<p align="center">
+  
+![screenshot](img/clip.gif)
+</p>  
 
 In our benchmark, we performed examinations on general-purpose lossless compressors, including 7 NN-based and 6 traditional compressors, using 19 datasets with differing type. Each loss-less compressor was evaluated on 13 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression.
 
