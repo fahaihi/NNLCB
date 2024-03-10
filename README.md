@@ -1,7 +1,7 @@
 <!-- LOGO -->
 <br />
 <h1 align="center">
-  <img src="https://fahaihi.github.io/NNLCB/LOG.png" alt="Logo" width="722" height="189">
+  <img src="https://fahaihi.github.io/NNLCB/LOG.png" alt="Logo" width="1642" height="675">
 </h1>
 <p align="center">
   A Holistic Benchmark Evaluation for Neural-Network-Based Lossless Universal Compression Algorithms.
