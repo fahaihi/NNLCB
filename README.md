@@ -43,8 +43,8 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 
 ### Cmix
 Cmix is a neural network based lossless compression algorithm aimed at optimizing compression ratio at the cost of high CPU/memory usage, and it uses thousands of context models followed by an NN-based mixer. We used Cmix V19 to finish the experiments.
-
-``` shell script
+[@The Cmix Offical Website](https://github.com/byronknoll/cmix)
+```shell script
 # compression
 cmix -c file file.cmix
 # decompression
@@ -159,7 +159,7 @@ LZMA2 improves the multi-threading capability and performance of the LZMA algori
 
 ### PPMD
 PPMD is a context-based compressor, and its core idea is the Partial Matching Prediction (PPM) algorithm proposed by Cleary and Witten. PPM is a statistical modeling technique that uses a set of previous symbols in the input to predict the next symbol to reduce the output data’s entropy. PPM differs from a dictionary because PPM predicts the next symbol instead of trying to find the next symbol in the dictionary to encode. We utilized the PPMD in the 7-Zip to compress data.
-The Source Code Linkage: https://www.7-zip.org/
+Linkage: https://www.7-zip.org/
 ``` shell script
 # compression
 7zz a -m0=ppmd -mx9 -mmt16 file.7z file
