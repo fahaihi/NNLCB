@@ -66,7 +66,7 @@ In our comparison examinations, we benchmarked 7 advanced general-purpose NN-bas
 
 All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silver 4310 CPUs (2.10 GHz, 48 cores in total), 4* NVIDIA GeForce RTX 4090 GPUs (16,384 CUDA cores, 24 GB of GPU memory), and 128 GB of DDR4 RAM. The server runs the operating system Ubuntu 20.04.6 LTS.
 
-## Benchmark Algorithms details and commands
+## Algorithms details and commands
 
 ### [Cmix](https://github.com/byronknoll/cmix)
 Cmix is a neural network based lossless compression algorithm aimed at optimizing compression ratio at the cost of high CPU/memory usage, and it uses thousands of context models followed by an NN-based mixer. We used Cmix V19 to finish the experiments.
