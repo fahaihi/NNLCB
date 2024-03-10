@@ -203,7 +203,7 @@ PPMD is a context-based compressor, and its core idea is the Partial Matching Pr
 All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silver 4310 CPUs (2.10 GHz, 48 cores in total), 4* NVIDIA GeForce RTX 4090 GPUs (16,384 CUDA cores, 24 GB of GPU memory), and 128 GB of DDR4 RAM. The server runs the operating system Ubuntu 20.04.6 LTS.
 
 ## Benchmark Results
-#### Performance comparison of different universal lossless compression algorithms on benchmark datasets
+#### Performance comparison of different universal lossless compression tools on benchmark datasets
 
 | Algorithms | AvgCR | WavgCR | TotalCT | TotalDT | AvgCPM | AvgDPM | AvgSSP | WavgSSP | CRP |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -222,7 +222,13 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 | Gzip | 2.976 | 3.158 | 0.008 | 0.003 | 0.002 | 0.002 | 0.628 | 0.605 | 14.809 |
 | DZip* | 4.457 | 4.358 | 9.769 | 4.060 | 3.576 | 2.561 | 0.443 | 0.455 | 14.912 |
 | DeepZip* | 4.472 | 4.364 | 5.505 | 1.122 | 2.198 | 1.738 | 0.441 | 0.455 | 14.823 |
-
+#### Notes:
+##### "*" : Consideration of NN Model Size
+##### "Avg/WavgCR" : Average OR Weighted Average Compression Ratio
+##### "TotalCT/DT" : Total Compression OR Decompression Time
+##### "AvgCPM/DPM" : Average Compression OR Decompression Peak Memory
+##### "Avg/WavgSSP" : Average OR Weighted Average Storage Saving Percentage
+##### "CRP" : Compression Robust Performance
 ## Acknowledgements
 - Thanks to [@NCBI](https://www.freelancer.com/u/Ostokhoon) for all available datasets.
 
