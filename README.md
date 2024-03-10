@@ -1,10 +1,10 @@
 <!-- LOGO -->
 <br />
 <h1 align="center">
-  <img src="https://fahaihi.github.io/NNLCB/LOG.png" alt="Logo" width="900" height="189">
+  <img src="https://fahaihi.github.io/NNLCB/LOG.png" alt="Logo" width="821" height="350">
 </h1>
 <p align="center">
-  **A Holistic Benchmark Evaluation for Neural-Network-Based Lossless Universal Compressors**
+# A Holistic Benchmark Evaluation for Neural-Network-Based Lossless Universal Compressors**
 </p>
 
 ## Overview
