@@ -39,9 +39,9 @@ In our comparison examinations, we benchmarked 7 advanced general-purpose NN-bas
 
 All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silver 4310 CPUs (2.10 GHz, 48 cores in total), 4* NVIDIA GeForce RTX 4090 GPUs (16,384 CUDA cores, 24 GB of GPU memory), and 128 GB of DDR4 RAM. The server runs the operating system Ubuntu 20.04.6 LTS.
 
-## Benchmark Algorithms details
+## Benchmark Algorithms details and commands
 
-### Cmix [@The Cmix Offical Website](https://github.com/byronknoll/cmix)
+### [Cmix](https://github.com/byronknoll/cmix)
 Cmix is a neural network based lossless compression algorithm aimed at optimizing compression ratio at the cost of high CPU/memory usage, and it uses thousands of context models followed by an NN-based mixer. We used Cmix V19 to finish the experiments.
 ```sh
 # compression
@@ -49,7 +49,7 @@ cmix -c file file.cmix
 # decompression
 cmix -d file.cmix file.cmix.out
 ```
-### LSTM-compress [@The LSTM-compress Offical Website](https://github.com/byronknoll/lstm-compress)
+### [LSTM-compress](https://github.com/byronknoll/lstm-compress)
 LSTM-compressor is an LSTM-based lossless compression algorithm that uses the same LSTM module and preprocessing code as CMIX. LSTM-compress currently only supports compression of a single file. In this manuscript, we used LSTM-compress V3. The detailed commands are as follows.
 
 ```sh
@@ -59,107 +59,107 @@ lstm-compress -c file file.lstm
 lstm-compress -d file.lstm file.lstm.out
 ```
 
-### NNCP
+### [NNCP](https://bellard.org/nncp)
 NNCP is a lossless compression algorithm based on LSTM and supports multi-GPU parallel processing. NNCP is an experiment to build a practical lossless data compressor with neural networks. The latest version uses a Transformer model. In this manuscript, we used NNCP V2021-06-01 to finish the experiments. The detailed commands are as follows.
 
-``` shell script
+```sh
 # compression
 nncp c file file.nncp -T 16 --cuda
 # decompression
 nncp d file.nncp file.nncp.out -T 16 --cuda
 ```
-### DeepZip
+### [DeepZip](https://github.com/mohit1997/DeepZip)
 DeepZip is a general-purpose compression algorithm based on recurrent neural networks. It belongs to the static pre-training method. The detailed commands for using DeepZip are shown below.
 
-``` shell script
+```sh
 # compression
 sh ./compress.sh file file.deepzip bs model
 # decompression
 sh ./decompress.sh file.deepzip file.deepzip.out bs model
 ```
-### DZip
+### [DZip](https://github.com/mohit1997)
 DZip is an upgraded version of DeepZip, with an extra deeper network added to DeepZip to improve compression. DZip includes two compression modes, combined mode and bootstrap mode.  The detailed commands of DZip are as follows.
 
-``` shell script
+```sh
 # compression
 sh ./compress.sh file file.dzip com model
 # decompression
 sh ./decompress.sh file.dzip file.dzip.out com model
 ```
-### TRACE
+### [TRACE](https://github.com/mynotwo/A-Fast-Transformer-based-General-Purpose-LosslessCompressor)
 TRACE is a lossless compression algorithm based on Performer (a Transformer variant.) TRACE uses byte grouping and shared FFNs, and therefore has better execution efficiency. Since the original TRACE puts compression and decompression processes into simultaneous execution, in order to test the performance of compression and decompression separately, we have modified the source files to test the performance of compression or decompression separately.
 
-``` shell script
+```sh
 # compression
 python compressor.py --source file --comp file.trace
 # decompression
 python compressor.py --comp file.trace --decomp file.trace.out
 ```
 
-### PAC
+### [PAC](https://github.com/mynotwo/Faster-and-Stronger-Lossless-Compression-with-Optimized-Autoregressive-Framework)
 PAC is a deep learning based compression algorithm fusing MLP and Ordered Mask. Due to the use of MLP, PAC has a lower computational cost. Again, we separate the compression-decompression process of PAC as shown in the command line below.
 
-``` shell script
+```sh
 # compression
 python compressor.py --source file --comp file.pac
 # decompression
 python compressor.py --comp file.pac --decomp file.pac.out
 ```
 
-### Gzip
+### [Gzip](https://www.gnu.org/software/gzip/)
 
 Gzip is a popular early general-purpose lossless compression program originally written by Jean-loup Gailly for the GNU project. The commands for Gzip are shown below.
 
-``` shell script
+```sh
 # compression
 gzip -c file > file.gz -9
 # decompression
 gzip file.gz -9
 ```
-### PBzip2
+### [PBzip2](https://launchpad.net/pbzip2)
 PBzip2 is a parallel implementation of the Bzip2 block-sorting file compression algorithm that uses pthreads and achieves near-linear speedup on SMP devices. PBzip2 utilizes the Burrows-Wheeler block sorting algorithm for compressing files, along with Huffman coding for efficient text compression. This manuscript uses parallel Bzip2 V1.1.13  to compress data.
 
-``` shell script
+```sh
 # compression
 pbzip2 -9 -m2000 -p16 -c file > file.bz2
 # decompression
 pbzip2 -dc -9 -p16 -m2000 file.bz2
 ```
 
-### XZ
+### [XZ](https://xz.tukaani.org/xz-utils/)
 XZ Utils is free general-purpose data compression software with a high compression ratio. XZ Utils were written for POSIX-like systems, but also work on some not-so-POSIX systems. XZ Utils are the successor to LZMA Utils. In our experiments, we used XZ V5.5.0. The compression and decompression commands are as follows.
 
-``` shell script
+```sh
 # compression
 pbzip2 -9 -m2000 -p16 -c file > file.bz2
 # decompression
 pbzip2 -dc -9 -p16 -m2000 file.bz2
 ```
 
-### BSC
+### [BSC](https://github.com/IlyaGrebnov/libbsc)
 BSC is a high-performance file compressor based on lossless block-ordered data compression algorithm, block-ordered data compression algorithm, high-performance file compressor. This manuscript uses BSC V3.3.2 to compress and decompress data.
 
-``` shell script
+```sh
 # compression
 bsc e file file.bsc -e2
 # decompression
 bsc d file.bsc file.bsc.out
 ```
 
-### LZMA2
+### [LZMA2](https://www.7-zip.org/)
 LZMA2 improves the multi-threading capability and performance of the LZMA algorithm and better handles incompressible data, so the compression performance is slightly improved. We also used the built-in LZMA2 algorithm in the 7-Zip application.
 
-``` shell script
+```sh
 # compression
 7zz a -m0=lzma2 -mx9 -mmt16 file.7z file
 # decompression
 7zz x -y -mx9 -mmt16 file.7z
 ```
 
-### PPMD
+### [PPMD](https://www.7-zip.org/)
 PPMD is a context-based compressor, and its core idea is the Partial Matching Prediction (PPM) algorithm proposed by Cleary and Witten. PPM is a statistical modeling technique that uses a set of previous symbols in the input to predict the next symbol to reduce the output data’s entropy. PPM differs from a dictionary because PPM predicts the next symbol instead of trying to find the next symbol in the dictionary to encode. We utilized the PPMD in the 7-Zip to compress data.
-Linkage: https://www.7-zip.org/
-``` shell script
+
+```sh
 # compression
 7zz a -m0=ppmd -mx9 -mmt16 file.7z file
 # decompression
