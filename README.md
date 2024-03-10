@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!-- LOGO -->
 <br />
 <h1 align="center">
@@ -29,6 +29,7 @@ Currently, in our benchmark, we performed examinations on general-purpose lossle
 | Gzip \cite{Gzip}              | 2.976       | 3.158       | 0.008    | 0.003    | 0.002     | 0.002     | 0.628     | 0.605     | 14.809    |
 | DZip* \cite{goyal2021dzip}    | 4.457       | 4.358       | 9.769    | 4.060    | 3.576     | 2.561     | 0To embed the table in a README file, you can convert the LaTeX table into a Markdown table format. Here's the converted table:
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Embedded Excel Spreadsheet</title>
