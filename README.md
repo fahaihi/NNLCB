@@ -200,8 +200,9 @@ PPMD is a context-based compressor, and its core idea is the Partial Matching Pr
 All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silver 4310 CPUs (2.10 GHz, 48 cores in total), 4* NVIDIA GeForce RTX 4090 GPUs (16,384 CUDA cores, 24 GB of GPU memory), and 128 GB of DDR4 RAM. The server runs the operating system Ubuntu 20.04.6 LTS.
 
 
-## Acknowledgements
+<!-- ## Acknowledgements
 - Thanks to [@NCBI](https://www.freelancer.com/u/Ostokhoon) for all available datasets.
+-->
 
 ## Additional Information
 **Source-Version-Date**   2024.03.08.
