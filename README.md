@@ -12,6 +12,34 @@
 NNLCB is a general-purpose (Universal) lossless compression algorithms benchmark test for multi-source data with deep neural networks.
 Currently, in our benchmark, we performed examinations on general-purpose lossless compressors, including 7 NN-based and 6 traditional compressors, using 19 datasets with differing type. Each loss-less compressor was evaluated on 13 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression.
 
+## Benchmark Results
+#### Performance comparison of different universal lossless compression tools on benchmark datasets
+
+| Algorithms | AvgCR | WavgCR | TotalCT | TotalDT | AvgCPM | AvgDPM | AvgSSP | WavgSSP | CRP |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Cmix | **1.502** | 1.784 | 74.427 | 74.613 | 18.975 | 18.976 | 0.812 | 0.777 | 20.989 |
+| DZip | **1.628** | 1.876 | 9.769 | 4.060 | 3.576 | 2.561 | 0.796 | 0.765 | 18.943 |
+| DeepZip | **1.643** | 1.875 | 5.505 | 1.122 | 2.198 | 1.738 | 0.795 | 0.766 | 18.645 |
+| NNCP | 1.825 | 1.986 | 23.722 | 23.454 | 0.111 | 0.111 | 0.772 | 0.752 | 16.856 |
+| Lstm-compress | 1.900 | 2.091 | 11.526 | 11.482 | 0.009 | 0.009 | 0.762 | 0.739 | 16.260 |
+| PAC | 1.912 | 2.044 | 2.496 | 3.474 | 2.330 | 2.434 | 0.761 | 0.744 | 15.986 |
+| TRACE | 1.963 | 2.126 | 2.172 | 3.143 | 2.324 | 2.421 | 0.755 | 0.734 | 15.756 |
+| BSC | 2.048 | 2.423 | 0.008 | 0.006 | 0.070 | 0.071 | 0.744 | 0.697 | 18.613 |
+| PPMD | 2.092 | 2.444 | 0.011 | 0.012 | 0.185 | 0.184 | 0.738 | 0.694 | 18.404 |
+| XZ | 2.219 | 2.406 | 0.033 | 0.004 | 0.228 | 0.039 | 0.723 | 0.699 | 16.582 |
+| Lzma2 | 2.227 | 2.392 | 0.017 | 0.003 | 0.195 | 0.025 | 0.722 | 0.701 | 16.321 |
+| PBzip2 | 2.345 | 2.665 | 0.003 | 0.003 | 0.083 | 0.050 | 0.707 | 0.667 | 16.732 |
+| Gzip | 2.976 | 3.158 | 0.008 | 0.003 | 0.002 | 0.002 | 0.628 | 0.605 | 14.809 |
+| DZip* | 4.457 | 4.358 | 9.769 | 4.060 | 3.576 | 2.561 | 0.443 | 0.455 | 14.912 |
+| DeepZip* | 4.472 | 4.364 | 5.505 | 1.122 | 2.198 | 1.738 | 0.441 | 0.455 | 14.823 |
+
+**Notes.** "*" : Consideration of NN Model Size; 
+"Avg/WavgCR (bits/base)" : Average OR Weighted Average Compression Ratio; 
+"TotalCT/DT (Hours)" : Total Compression OR Decompression Time;
+"AvgCPM/DPM (GB)" : Average Compression OR Decompression Peak Memory;
+"Avg/WavgSSP (%)" : Average OR Weighted Average Storage Saving Percentage;
+"CRP (%)" : Compression Robust Performance.
+
 ## Benchmark DataSets
 
 We benchmark on 19 widely studied datasets. 
@@ -19,19 +47,19 @@ These datasets contain various types of text, images, audio, genomic data, etc.
 Please refer to our paper for detailed information about the data, and the details of how to obtain each dataset are given below.
 The detailed link address of the benchmark datasets are as follows:
 
-D1~12:  [https://sun.aei.polsl.pl//~sdeor/index.php?page=silesia](https://sun.aei.polsl.pl//~sdeor/index.php?page=silesia)
+D1~12:  [Silesia data compression porpus](https://sun.aei.polsl.pl//~sdeor/index.php?page=silesia)
 
-D13~14: [https://mattmahoney.net/dc/text.html](https://mattmahoney.net/dc/text.html)
+D13~14: [ English wikipedia datasets](https://mattmahoney.net/dc/text.html)
 
-D15: https://storage.googleapis.com/huggingface-nlp/datasets/bookcorpus/bookcorpus.tar.bz2
+D15: [A BookCorpus](https://storage.googleapis.com/huggingface-nlp/datasets/bookcorpus/bookcorpus.tar.bz2)
 
-D16: [https://github.com/karolpiczak/ESC-50](https://github.com/karolpiczak/ESC-50)
+D16: [First 500 audio files of the ESC](https://github.com/karolpiczak/ESC-50)
 
-D17: [https://image-net.org/challenges/LSVRC/2012/2012-downloads.php](https://image-net.org/challenges/LSVRC/2012/2012-downloads.php)
+D17: [Training datasets in task3 from ISLVRC on 2012](https://image-net.org/challenges/LSVRC/2012/2012-downloads.php)
 
-D18: https://drive.google.com/file/d/1-hWz1fQFo5Y0KqzTNhslkbaJkKz-qnaN/view?usp=sharing
+D18: [Random extracted disk backup](https://drive.google.com/file/d/1-hWz1fQFo5Y0KqzTNhslkbaJkKz-qnaN/view?usp=sharing)
 
-D19: https://tinyurl.com/DNAcorpus
+D19: [A corpus of DNA sequences from 15 different species](https://tinyurl.com/DNAcorpus)
 
 ## Algorithms Details
 In our comparison examinations, we benchmarked 7 advanced general-purpose NN-based compressors Cmix, NNCP, Lstm-compress, DeepZip, DZip, TRACE, and PAC, and 6 traditional methods Gzip, PBzip2, XZ, BSC, Lzma2, and PPMD. 
@@ -171,33 +199,6 @@ PPMD is a context-based compressor, and its core idea is the Partial Matching Pr
 
 All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silver 4310 CPUs (2.10 GHz, 48 cores in total), 4* NVIDIA GeForce RTX 4090 GPUs (16,384 CUDA cores, 24 GB of GPU memory), and 128 GB of DDR4 RAM. The server runs the operating system Ubuntu 20.04.6 LTS.
 
-## Benchmark Results
-#### Performance comparison of different universal lossless compression tools on benchmark datasets
-
-| Algorithms | AvgCR | WavgCR | TotalCT | TotalDT | AvgCPM | AvgDPM | AvgSSP | WavgSSP | CRP |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Cmix [^1^] | **1.502** | 1.784 | 74.427 | 74.613 | 18.975 | 18.976 | 0.812 | 0.777 | 20.989 |
-| DZip [^2^] | **1.628** | 1.876 | 9.769 | 4.060 | 3.576 | 2.561 | 0.796 | 0.765 | 18.943 |
-| DeepZip [^3^] | **1.643** | 1.875 | 5.505 | 1.122 | 2.198 | 1.738 | 0.795 | 0.766 | 18.645 |
-| NNCP | 1.825 | 1.986 | 23.722 | 23.454 | 0.111 | 0.111 | 0.772 | 0.752 | 16.856 |
-| Lstm-compress | 1.900 | 2.091 | 11.526 | 11.482 | 0.009 | 0.009 | 0.762 | 0.739 | 16.260 |
-| PAC | 1.912 | 2.044 | 2.496 | 3.474 | 2.330 | 2.434 | 0.761 | 0.744 | 15.986 |
-| TRACE | 1.963 | 2.126 | 2.172 | 3.143 | 2.324 | 2.421 | 0.755 | 0.734 | 15.756 |
-| BSC | 2.048 | 2.423 | 0.008 | 0.006 | 0.070 | 0.071 | 0.744 | 0.697 | 18.613 |
-| PPMD | 2.092 | 2.444 | 0.011 | 0.012 | 0.185 | 0.184 | 0.738 | 0.694 | 18.404 |
-| XZ | 2.219 | 2.406 | 0.033 | 0.004 | 0.228 | 0.039 | 0.723 | 0.699 | 16.582 |
-| Lzma2 | 2.227 | 2.392 | 0.017 | 0.003 | 0.195 | 0.025 | 0.722 | 0.701 | 16.321 |
-| PBzip2 | 2.345 | 2.665 | 0.003 | 0.003 | 0.083 | 0.050 | 0.707 | 0.667 | 16.732 |
-| Gzip | 2.976 | 3.158 | 0.008 | 0.003 | 0.002 | 0.002 | 0.628 | 0.605 | 14.809 |
-| DZip* | 4.457 | 4.358 | 9.769 | 4.060 | 3.576 | 2.561 | 0.443 | 0.455 | 14.912 |
-| DeepZip* | 4.472 | 4.364 | 5.505 | 1.122 | 2.198 | 1.738 | 0.441 | 0.455 | 14.823 |
-
-**Notes.** "*" : Consideration of NN Model Size; 
-"Avg/WavgCR (bits/base)" : Average OR Weighted Average Compression Ratio; 
-"TotalCT/DT (Hours)" : Total Compression OR Decompression Time;
-"AvgCPM/DPM (GB)" : Average Compression OR Decompression Peak Memory;
-"Avg/WavgSSP (%)" : Average OR Weighted Average Storage Saving Percentage;
-"CRP (%)" : Compression Robust Performance;
 
 ## Acknowledgements
 - Thanks to [@NCBI](https://www.freelancer.com/u/Ostokhoon) for all available datasets.
