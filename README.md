@@ -38,9 +38,9 @@ Currently, in our benchmark, we performed examinations on general-purpose lossle
 "TotalCT/DT (Hours)" : Total Compression OR Decompression Time;
 "AvgCPM/DPM (GB)" : Average Compression OR Decompression Peak Memory;
 "Avg/WavgSSP (%)" : Average OR Weighted Average Storage Saving Percentage;
-"CRP (%)" : Compression Robust Performance.
+"CRP (%)" : Compression Robust Performance (%).
 
-## Benchmark DataSets
+## Benchmark Datasets
 
 We benchmark on 19 widely studied datasets. 
 These datasets contain various types of text, images, audio, genomic data, etc.
@@ -209,6 +209,6 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 
 **Latest-Version-Date**   2024.03.10.
 
-**Authors:**     NBJL-AIGrop.
+**Authors:**     NBJL-AIGroup.
 
 **Contact us:**  https://nbjl.nankai.edu.cn, sunh@nbjl.naikai.edu.cn or mahd@nbjl.naikai.edu.cn
