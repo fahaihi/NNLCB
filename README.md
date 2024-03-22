@@ -15,7 +15,7 @@ Currently, in our benchmark, we performed examinations on general-purpose lossle
 ## Benchmark Results
 #### Performance comparison of different universal lossless compression tools on benchmark datasets
 
-|Algorithm | *WavgCR* | *AvgCR* | *WavgSSP* | *AvgSSP* | *CRP* | *TotalCT* | *TotalDT* | *AvgCPM* | *AvgDPM* |
+| Algorithm | *WavgCR* | *AvgCR* | *WavgSSP* | *AvgSSP* | *CRP* | *TotalCT* | *TotalDT* | *AvgCPM* | *AvgDPM* |
 | -------- | --------- | -------- | ------- | --------- | -------- | ----- | --------- | --------- | -------- | 
 | Cmix     | 1.602     | 1.481    | 79.972    | 81.482   | 19.698  | 108.201 | 108.3     | 19.174    | 19.175   |
 | NNCP     | **4.173** | **2.237**| **47.826**| **72.028**| 15.42   | 497.734 | 508.632   | 0.111     | 0.111    |
