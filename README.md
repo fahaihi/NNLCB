@@ -10,7 +10,7 @@
 
 ## Overview
 NNLCB is a general-purpose (Universal) lossless compression algorithms benchmark test for multi-source data with deep neural networks.
-Currently, in our benchmark, we performed examinations on general-purpose lossless compressors, including 8 NN-based and 8 traditional compressors, using 28 datasets with differing type. Each loss-less compressor was evaluated on 13 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression.
+Currently, in our benchmark, we performed examinations on general-purpose lossless compressors, including 8 NN-based and 9 traditional compressors, using 28 datasets with differing type. Each loss-less compressor was evaluated on 19 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression, etc.
 
 ## Benchmark Results
 #### Performance comparison of different universal lossless compression tools on benchmark datasets
@@ -84,7 +84,7 @@ The detailed link address of the benchmark datasets are as follows:
 |D28|[ERR7091247](https://www.ncbi.nlm.nih.gov/sra/ERR7091247)|genome|1926041160 |A collection of genomics sequencing dataset with FastQ format|
 
 ## Algorithms Details
-In our comparison examinations, we benchmarked 8 advanced general-purpose NN-based compressors Cmix, NNCP, Lstm-compress, DeepZip, DZip, TRACE, PAC, LLMZip and 8 traditional methods Gzip, PBzip2, XZ, BSC, SnZip, Lzma2, and PPMD, LZ4. 
+In our comparison examinations, we benchmarked 8 advanced general-purpose NN-based compressors Cmix, NNCP, Lstm-compress, DeepZip, DZip, TRACE, PAC, LLMZip and 9 traditional methods Gzip, PBzip2, XZ, BSC, SnZip, Lzma2, and PPMD, LZ4, and X3. 
 
 All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silver 4310 CPUs (2.10 GHz, 48 cores in total), 4* NVIDIA GeForce RTX 4090 GPUs (16,384 CUDA cores, 24 GB of GPU memory), and 128 GB of DDR4 RAM. The server runs the operating system Ubuntu 20.04.6 LTS.
 
@@ -258,8 +258,11 @@ All experiments were conducted on a GPU server equipped with 4 * Intel Xeon Silv
 ## Additional Information
 **Source-Version-Date**   2024.03.08. 2024.03.10.
 
-**Latest-Version-Date**   2024.7.28.
+**Latest-Version-Date**   2024.07.28.
 
 **Authors:**     NBJL-AIGroup.
 
 **Contact us:**  https://nbjl.nankai.edu.cn, sunh@nbjl.naikai.edu.cn, and mahd@nbjl.naikai.edu.cn
+
+## Change Log
+2024.07.29: Modify the ReadMe file to include the X3 algorithm.
