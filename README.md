@@ -12,7 +12,7 @@
 NNLCB is a general-purpose (Universal) lossless compression algorithms benchmark test for multi-source data with deep neural networks.
 Currently, in our benchmark, we performed examinations on general-purpose lossless compressors, including 8 NN-based and 9 traditional compressors, using 28 datasets with differing type. Each loss-less compressor was evaluated on 19 performance measures, including compression robustness, compression strength, as well as time and peak memory required for compression and decompression, etc.
 
-**Note**: The NNLCB has been published on the [FCS journal]([https://journal.hep.com.cn/fcs/EN/10.1007/s11704-024-40300-5](https://journal.hep.com.cn/fcs/EN/10.1007/s11704-024-40300-5)). If you would like to test new compressors, please contact us.
+**Note**: The NNLCB has been published on the [FCS journal](https://journal.hep.com.cn/fcs/EN/10.1007/s11704-024-40300-5). If you would like to test new compressors, please contact us.
 
 ## Benchmark Results
 #### Performance comparison of different universal lossless compression tools on benchmark datasets
